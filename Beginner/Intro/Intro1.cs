@@ -10,7 +10,17 @@ language developed by Microsoft.
 It was developed by Anders Hejlsberg and his team during the development of .Net Framework. 
 */
 
- // A namespace is a collection of classes.
+// A namespace is a collection of classes.
+
+//Keyboard shortcuts  in Visual Studio.
+/*
+ 1.Ctrl+K+C --- Comments.
+ 2.Ctrl+K+U --- Uncomments.
+ 3.Alt+F12  --- Definition
+ 4.Ctrl+D,Ctrl+K --- Format
+ */
+
+
 
 namespace Intro
 {
@@ -24,6 +34,10 @@ namespace Intro
         */
         static void Main(string[] args)
         {
+            //calling the function Load from the class Intro2.
+            var cal = new Intro2();
+            cal.Load();
+
             AuthUsers();
         }
 
@@ -58,12 +72,21 @@ namespace Intro
             eMail = Console.ReadLine();
 
             //Variable of Type int.
-            int level;
+            int level = 0;
 
             Console.WriteLine("Enter Level");
             Console.Write("type level here:");
 
-            level = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                level = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException e)
+            {
+                Console.Write("Please enter a number !");
+
+            }
+
 
 
             //Print out a new Line.
@@ -73,11 +96,15 @@ namespace Intro
 
             Console.WriteLine("\n");
 
-            Console.WriteLine("Welcome " + lastName + "  to the C# tutorials.");
+            //  Console.WriteLine("Welcome " + lastName + "  to the C# tutorials.");
+
+            //String interpolation lets you piece together strings in a more concise and readable way.
+            Console.WriteLine($"Welcome  {lastName.ToUpper()}  to the C# tutorials.");
+
 
             Console.WriteLine("\n");
 
-            Console.WriteLine("Email :" + eMail + "  has being verified");
+            Console.WriteLine("Email :" + eMail + " has being verified");
 
             Console.WriteLine("\n");
 
