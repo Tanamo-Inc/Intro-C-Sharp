@@ -186,11 +186,17 @@ namespace Game
 
                 #endregion
 
+                #region
+
                 if (direction == right) Console.Write(">");
                 if (direction == left) Console.Write("<");
                 if (direction == up) Console.Write("^");
                 if (direction == down) Console.Write("v");
 
+                #endregion
+
+   
+                #region
 
                 if (snakeNewHead.col == food.col && snakeNewHead.row == food.row)
                 {
@@ -250,6 +256,9 @@ namespace Game
                 sleepTime -= 0.01;
 
                 Thread.Sleep((int)sleepTime);
+
+                #endregion
+
             }
 
 
