@@ -8,14 +8,22 @@ namespace Game2
   
         bool turn = true; // true = X turn ; false = O turn;
         int myCounts = 0;
-
-        //My Constructor.
+        static string player1, player2;
+        // My Constructor.
         public TicTacToe()
         {
             InitializeComponent();
         }
 
-        //New Game Method.
+        // Players Method.
+        public static void myPlayers(String p1,String p2) {
+
+            player1 = p1;
+            player2 = p2;
+
+        }
+
+        // New Game Method.
         private void myNewGame(object sender, EventArgs e)
         {
 
@@ -35,19 +43,19 @@ namespace Game2
 
         }
 
-        //About Game Method.
+        // About Game Method.
         private void myAbout(object sender, EventArgs e)
         {
             MessageBox.Show("by Tanamo Inc.", "About");
         }
 
-        //Exit Game Method.
+        // Exit Game Method.
         private void myExit(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        //Reset Method
+        // Reset Method.
         private void myReset(object sender, EventArgs e)
         {
             x_win.Text = "0";
@@ -56,7 +64,7 @@ namespace Game2
 
         }
 
-        //Button Clicked Method.
+        // Button Clicked Method.
         private void but_click(object sender, EventArgs e)
         {
             Button but = (Button)sender;
@@ -73,7 +81,7 @@ namespace Game2
             check_winner();
         }
 
-        //Compute for Winner.
+        // Compute for Winner.
         private void check_winner() {
             bool win = false;
 
@@ -107,12 +115,12 @@ namespace Game2
 
                 if (turn)
                 {
-                    winner = "O";
+                    winner = player2;
                     o_win.Text = (Int32.Parse(o_win.Text)+1).ToString();
                 }
                 else
                 {
-                    winner = "X";
+                    winner = player1;
 
                     x_win.Text = (Int32.Parse(x_win.Text)+1).ToString();
                 }
@@ -127,7 +135,7 @@ namespace Game2
 
                 if (myCounts == 9)
                 {
-                    MessageBox.Show("What a Draw", "WOW");
+                    MessageBox.Show("It's a Draw !!!", "WOW");
 
                     draw_xo.Text = (Int32.Parse(draw_xo.Text) + 1).ToString();
                 }
@@ -136,7 +144,7 @@ namespace Game2
 
         }
 
-        //Disable my Buttons.
+        // Disable my Buttons.
         private void disable_Button()
         {
 
@@ -162,7 +170,7 @@ namespace Game2
 
         }
 
-        //Button Enter Method.
+        // Button Enter Method.
         private void but_enter(object sender, EventArgs e)
         {
             Button but = (Button)sender;
@@ -178,7 +186,7 @@ namespace Game2
 
         }
 
-        //Button Leave Method.
+        // Button Leave Method.
         private void but_leave(object sender, EventArgs e)
         {
 
@@ -193,8 +201,18 @@ namespace Game2
 
         }
 
-      
+        // Load Players Method.
+        private void TicTacToe_Load(object sender, EventArgs e)
+        {
+            Players p = new Players();
+            p.ShowDialog();
 
+            label1.Text = player1;
+            label3.Text = player2;
+
+
+
+        }
 
     }
 

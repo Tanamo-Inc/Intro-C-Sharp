@@ -6,9 +6,9 @@ using System.Threading;
 namespace Game
 {
     /*
-    *A structure is a value type data type.
-    *It helps you to make a single variable hold related data of various data types.
-    *The struct keyword is used for creating a structure.
+    * A structure is a value type data type.
+    * It helps you to make a single variable hold related data of various data types.
+    * The struct keyword is used for creating a structure.
     */
     struct Position
     {
@@ -41,10 +41,13 @@ namespace Game
         private  static void Logi()
         {
 
+            #region Init
+
             byte right = 0;
             byte left = 1;
             byte down = 2;
             byte up = 3;
+
             int lastFoodTime = 0;
             int foodDissapearTime = 8000;
             int negativePoints = 0;
@@ -52,12 +55,16 @@ namespace Game
             double sleepTime = 100;
             int direction = right;
 
-
-            //****Generator****//
             Random generator = new Random();
 
 
-            //****Directions****//
+            Console.BufferHeight = Console.WindowHeight;
+            lastFoodTime = Environment.TickCount;
+
+            #endregion
+
+        
+            #region Directions
             Position[] dirx = new Position[]
             {
                 new Position(0, 1), // right
@@ -66,12 +73,11 @@ namespace Game
                 new Position(-1, 0), // up
             };
 
-         
-            Console.BufferHeight = Console.WindowHeight;
-            lastFoodTime = Environment.TickCount;
+            #endregion
 
-
-            //****Obstacles****//
+        
+            #region Obstacles
+            
             List<Position> obs = new List<Position>()
             {
                 new Position(12, 12),
@@ -87,7 +93,11 @@ namespace Game
                 Console.Write("#");
             }
 
-            //****Body****//
+
+            #endregion
+
+
+            #region Body
             Queue<Position> body = new Queue<Position>();
             for (int i = 0; i <= 10; i++)
             {
@@ -110,7 +120,10 @@ namespace Game
                 Console.ForegroundColor = ConsoleColor.DarkGray;
                 Console.Write("*");
             }
+            #endregion
 
+
+            #region True
             while (true)
             {
                 negativePoints++;
@@ -138,6 +151,9 @@ namespace Game
                     }
                 }
 
+                #endregion
+
+                #region Head
                 Position snakeHead = body.Last();
                 Position nextDirection = dirx[direction];
 
@@ -167,6 +183,9 @@ namespace Game
 
                 Console.SetCursorPosition(snakeNewHead.col, snakeNewHead.row);
                 Console.ForegroundColor = ConsoleColor.Gray;
+
+                #endregion
+
                 if (direction == right) Console.Write(">");
                 if (direction == left) Console.Write("<");
                 if (direction == up) Console.Write("^");
@@ -236,6 +255,10 @@ namespace Game
 
 
         }
+
+
+
+
 
     }
 }

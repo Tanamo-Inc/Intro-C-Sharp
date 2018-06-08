@@ -5,7 +5,7 @@ namespace Intro
 {
     class Intro2
     {
-        //Method to load informations from the main class(Intro1).
+        // Method to load informations from the main class(Intro1).
         public void Load()
         {
             Console.WriteLine("\t Loading ...");

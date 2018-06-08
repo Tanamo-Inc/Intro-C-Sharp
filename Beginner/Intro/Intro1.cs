@@ -8,11 +8,13 @@ using System;
 C# is a simple, modern, general-purpose, object-oriented programming 
 language developed by Microsoft.
 It was developed by Anders Hejlsberg and his team during the development of .Net Framework. 
+
 */
 
 // A namespace is a collection of classes.
 
-//Keyboard shortcuts  in Visual Studio.
+// Keyboard shortcuts  in Visual Studio.
+
 /*
  1.Ctrl+K+C --- Comments.
  2.Ctrl+K+U --- Uncomments.
@@ -21,30 +23,51 @@ It was developed by Anders Hejlsberg and his team during the development of .Net
  */
 
 
+// Conventions For using comments in C#.
+/*
+ *  Place the comment on a separate line, not at the endofthe line of code.
+ *  Begin A comment text with an Upper Case Letter.
+ *  End a comment Text with a period.
+ */
+
+
+// Using Region
+/*  You can create your own region using the custom # region directive
+ *  Automatic outlining occurs in Visual Studio by Default.
+ *  it allows you to expand and collapse various code regions.
+ *   
+ *   start region
+ *   #region  name
+ *   {
+ *  
+ *   }
+ *   end region
+ *   #endregion
+ */
+
+
 
 namespace Intro
 {
-    class Intro1
-
-
-    {
+    class Intro1 {
         /*
         Main is spelled with a capital “M”, which is different than Java, C,C++ etc .
         All method names start with a capital letter in the .NET Framework for consistency
         */
         static void Main(string[] args)
         {
-            //calling the function Load from the class Intro2.
+            // Calling the function Load from the class Intro2.
             var cal = new Intro2();
             cal.Load();
 
             AuthUsers();
         }
 
-        //This is our authentication method.
+        // This is our authentication method.
         private static void AuthUsers()
         {
 
+            #region Using Region
             Console.WriteLine("*************   ******* ******   *****INTRODUCTION TO C# BY TANAMO INC.*****  ***** *******  *******************");
 
             Console.WriteLine("Please Fill The Instructions Below :");
@@ -52,26 +75,35 @@ namespace Intro
             Console.WriteLine("What's your First Name");
             Console.Write("type your first name here :");
 
-            //Variable of Type String.
-            String firstName;  //Using camel Case
+            #endregion
+
+            #region
+            // Using camel Case
+            string firstName;  
             firstName = Console.ReadLine();
 
             Console.WriteLine("What's your Last Name");
             Console.Write("type your last name:");
 
-            //Variable of Type String.
-            String lastName;  //Using camel Case
-            lastName = Console.ReadLine();
+            #endregion
 
+            #region
+
+            //Variable of Type String.
+            string lastName;  //Using camel Case
+            lastName = Console.ReadLine();
 
             Console.WriteLine("Enter Your Email Address");
             Console.Write("type your email address here:");
 
-
-            String eMail;
+            string eMail;
             eMail = Console.ReadLine();
 
-            //Variable of Type int.
+
+            #endregion
+
+            #region
+            // Variable of Type int.
             int level = 0;
 
             Console.WriteLine("Enter Level");
@@ -87,9 +119,10 @@ namespace Intro
 
             }
 
+            #endregion
 
-
-            //Print out a new Line.
+            #region
+            // Print out a new Line.
             Console.WriteLine("\n");
 
             Console.WriteLine("Hello " + firstName + " " + lastName);
@@ -98,9 +131,8 @@ namespace Intro
 
             //  Console.WriteLine("Welcome " + lastName + "  to the C# tutorials.");
 
-            //String interpolation lets you piece together strings in a more concise and readable way.
+            // String interpolation lets you piece together strings in a more concise and readable way.
             Console.WriteLine($"Welcome  {lastName.ToUpper()}  to the C# tutorials.");
-
 
             Console.WriteLine("\n");
 
@@ -108,15 +140,15 @@ namespace Intro
 
             Console.WriteLine("\n");
 
-            String message = "";
+            string message = "";
 
-            //Using the if Statment...
+            // Using the if Statment.
             if (level == 100)
             {
                 message = " you are in level 100";
             }
 
-            //Using the else if Statement...
+            // Using the else if Statement.
             else if (level == 200)
             {
                 message = " you are in level 200";
@@ -132,7 +164,7 @@ namespace Intro
                 message = " you are in level 400";
             }
 
-            //Using the else Statement...
+            // Using the else Statement.
             else
             {
                 message = " level not found";
@@ -151,10 +183,12 @@ namespace Intro
 
             Console.ReadLine();
 
+            #endregion
+
         }
 
 
-        //NB: Statements are terminated with a semicolon (;)
+        // NB: Statements are terminated with a semicolon (;)
 
     }
 

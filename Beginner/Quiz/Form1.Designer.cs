@@ -42,7 +42,7 @@
             this.check.TabIndex = 0;
             this.check.Text = "Check\r\n";
             this.check.UseVisualStyleBackColor = false;
-            this.check.Click += new System.EventHandler(this.enter_Click);
+            this.check.Click += new System.EventHandler(this.checker);
             // 
             // textBox1
             // 
@@ -60,7 +60,6 @@
             this.label1.Size = new System.Drawing.Size(275, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "C# runs on the  ____ Framework.";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Quiz
             // 

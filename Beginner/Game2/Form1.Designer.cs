@@ -77,21 +77,21 @@
             // newGame
             // 
             this.newGame.Name = "newGame";
-            this.newGame.Size = new System.Drawing.Size(152, 22);
+            this.newGame.Size = new System.Drawing.Size(132, 22);
             this.newGame.Text = "New Game";
             this.newGame.Click += new System.EventHandler(this.myNewGame);
             // 
             // resetToolStripMenuItem
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.resetToolStripMenuItem.Text = "Reset";
             this.resetToolStripMenuItem.Click += new System.EventHandler(this.myReset);
             // 
             // exit
             // 
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(152, 22);
+            this.exit.Size = new System.Drawing.Size(132, 22);
             this.exit.Text = "Exit";
             this.exit.Click += new System.EventHandler(this.myExit);
             // 
@@ -233,29 +233,34 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 345);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 11;
-            this.label1.Text = "X WIN";
+            this.label1.Text = "Player";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(127, 345);
+            this.label2.MinimumSize = new System.Drawing.Size(80, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 25);
             this.label2.TabIndex = 12;
             this.label2.Text = "DRAW";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(242, 345);
+            this.label3.Location = new System.Drawing.Point(225, 345);
+            this.label3.MinimumSize = new System.Drawing.Size(80, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 25);
+            this.label3.Size = new System.Drawing.Size(80, 25);
             this.label3.TabIndex = 13;
-            this.label3.Text = "O WIN";
+            this.label3.Text = "Player 2";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // x_win
             // 
@@ -281,7 +286,7 @@
             // 
             this.o_win.AutoSize = true;
             this.o_win.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.o_win.Location = new System.Drawing.Point(267, 385);
+            this.o_win.Location = new System.Drawing.Point(251, 385);
             this.o_win.Name = "o_win";
             this.o_win.Size = new System.Drawing.Size(21, 24);
             this.o_win.TabIndex = 16;
@@ -315,6 +320,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic Tac Toe";
+            this.Load += new System.EventHandler(this.TicTacToe_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
