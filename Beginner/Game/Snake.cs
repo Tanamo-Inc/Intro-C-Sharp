@@ -186,7 +186,7 @@ namespace Game
 
                 #endregion
 
-                #region
+                #region Controls
 
                 if (direction == right) Console.Write(">");
                 if (direction == left) Console.Write("<");

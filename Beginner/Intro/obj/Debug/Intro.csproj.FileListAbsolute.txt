@@ -4,3 +4,9 @@ E:\Visual Studio 2015\Projects\Intro C#\Beginner\Intro\bin\Debug\Intro.pdb
 E:\Visual Studio 2015\Projects\Intro C#\Beginner\Intro\obj\Debug\Intro.exe
 E:\Visual Studio 2015\Projects\Intro C#\Beginner\Intro\obj\Debug\Intro.pdb
 E:\Visual Studio 2015\Projects\Intro C#\Beginner\Intro\obj\Debug\Intro.csprojResolveAssemblyReference.cache
+E:\Visual Studio 2015\Projects\Intro-C-Sharp\Beginner\Intro\bin\Debug\Intro.exe.config
+E:\Visual Studio 2015\Projects\Intro-C-Sharp\Beginner\Intro\obj\Debug\Intro.exe
+E:\Visual Studio 2015\Projects\Intro-C-Sharp\Beginner\Intro\obj\Debug\Intro.pdb
+E:\Visual Studio 2015\Projects\Intro-C-Sharp\Beginner\Intro\bin\Debug\Intro.exe
+E:\Visual Studio 2015\Projects\Intro-C-Sharp\Beginner\Intro\bin\Debug\Intro.pdb
+E:\Visual Studio 2015\Projects\Intro-C-Sharp\Beginner\Intro\obj\Debug\Intro.csprojResolveAssemblyReference.cache
